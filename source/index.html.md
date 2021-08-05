@@ -1,11 +1,8 @@
 ---
-title: API Reference
+title: Ngorder API - Documentation
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
-  - javascript
+  - Json
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -21,17 +18,24 @@ code_clipboard: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Ngorder provides API that can be used to integrate your system with our platform. The API is built based on REST concept and will return JSON formatted data upon your requests. In order to use our API, you must have an existing active shop in our application.
+
+
+<!-- Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
 We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation. -->
 
 # Authentication
 
-> To authorize, use this code:
+In order to use our API, you can securely authorize your application using either Key Authentication or OAuth 2, this key will be available if you are using our [**Platinum package**](https://app.ngorder.id/upgrade?app=platinum-12), if you're already using our Platinum package be sure to check your key as it's updated every year. Both authorization method provide access to the same API, only the endpoints are slightly different.
 
-```ruby
+`https://api.ngorder.id/{specific-end-point}`
+
+<!-- > To authorize, use this code: -->
+
+<!-- ```ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
@@ -53,23 +57,69 @@ curl "api_endpoint_here" \
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
-```
+``` -->
 
-> Make sure to replace `meowmeowmeow` with your API key.
+<!-- > Make sure to replace `meowmeowmeow` with your API key. -->
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
+<!-- <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+</aside> -->
 
-# Kittens
+# User
+## Get User
+## Update User
 
-## Get All Kittens
+# Shop
+
+# Product
+## Product Category
+## Product CRUD
+
+# Customer
+## Customer Category
+## Customer Create
+## Customer Read
+## Customer Update
+## Customer Delete
+
+# Bank Account
+
+# Warehouse -opt
+
+# Supplier
+
+# Expedition
+
+# Order
+## Order Source -opt
+## Order Cost -opt
+## Order CRUD
+
+# Storefront & Privor
+## Order Confirmation
+## Setting Storefront Courier
+
+# Shipment
+# Payment
+## Virtual Account Transaction
+## Setting Payment Fee
+
+# Expense
+
+# Report
+
+# Analyzer
+
+# Notification
+
+# Billing
+
+# Woowa
+## Customer
+## Order
+
+<!-- ## Get All Kittens
 
 ```ruby
 require 'kittn'
@@ -238,4 +288,4 @@ This endpoint deletes a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
-
+ -->
