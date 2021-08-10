@@ -408,6 +408,7 @@ html, body {
       text-align: left;
       vertical-align: top;
       line-height: 1.6;
+      border: 1px solid #ccc;
       code {
         white-space: nowrap;
       }
@@ -415,7 +416,7 @@ html, body {
 
     th {
       padding: 5px 10px;
-      border-bottom: 1px solid #ccc;
+      // border: 1px solid #ccc;
       vertical-align: bottom;
     }
 
@@ -423,9 +424,9 @@ html, body {
       padding: 10px;
     }
 
-    tr:last-child {
-      border-bottom: 1px solid #ccc;
-    }
+    // tr:last-child {
+    //   border-bottom: 1px solid #ccc;
+    // }
 
     tr:nth-child(odd)>td {
       background-color: lighten($main-bg,4.2%);

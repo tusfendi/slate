@@ -1438,8 +1438,473 @@ id | []integer | Product ID
 
 
 
+# Customer Category
+## Create Category
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+{
+  "response": "Success",
+  "data": {
+    "id": 123,
+    "category_name": "Pelanggan Tetap",
+    "code": "2",
+    "status": "NON ACTIVE",
+    "discount_access": "1",
+    "wholesale_access": "1"
+  }
+}
+```
+Create a customer category
+
+### Endpoint
+`POST https://api.ngorder.id/api/open/customer-category/create`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+category_name | string | Category name
+discount_access `(optional)` | boolean | Discount access for this category.
+wholesale_access `(optional)` | boolean | Wholesale access for this category.
+
+
+## Get Categories
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "code": "N",
+      "category_name": "Pelanggan",
+      "status": "ACTIVE",
+      "discount_access": true,
+      "wholesale_access": true
+    },
+    {
+      "id": 2,
+      "code": "Y",
+      "category_name": "Reseller",
+      "status": "ACTIVE",
+      "discount_access": true,
+      "wholesale_access": false
+    },
+    {
+      "id": 3,
+      "code": "D",
+      "category_name": "Dropship",
+      "status": "ACTIVE",
+      "discount_access": true,
+      "wholesale_access": false
+    },
+    {
+      "id": 122,
+      "code": "1",
+      "category_name": "Teman",
+      "status": "ACTIVE",
+      "discount_access": true,
+      "wholesale_access": false
+    },
+    {
+      "id": 123,
+      "code": "2",
+      "category_name": "Pelanggan Tetap",
+      "status": "ACTIVE",
+      "discount_access": true,
+      "wholesale_access": true
+    }
+  ]
+}
+```
+Get all customer category
+
+### Endpoint
+`GET https://api.ngorder.id/api/open/customer-category`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer token
+
+### Query
+Parameter | Type | Description
+--------- | ---- | -----------
+status `(optional)` | string | Sort by categories active status. Available values: `N` or `Y`
+
+## Update Customer Category
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+{
+  "response": "Success",
+  "data": {
+    "id": 122,
+    "code": "1",
+    "category_name": "Teman",
+    "status": "ACTIVE",
+    "discount_access": true,
+    "wholesale_access": false
+  }
+}
+```
+Update customer category
+
+### Endpoint
+`PATCH https://api.ngorder.id/api/open/customer-category/update`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+id | integer | Customer category ID
+code | string | Customer category code
+category_name `(optional)` | string | Category name
+status `(optional)` | string | Active status. Available values: `Y` (active) or `N` (non active)
+discount_access `(optional)` | string | Discount access for this category
+wholesale_access `(optional)` | string | Wholesale access for this category
+
+# Region
+## Get Regions
+> Example response:
+
+```json
+{
+  "data": [
+    {
+      "_id": "5d1d86101449f91d8b32cdce",
+      "id": 3627,
+      "subdistrict": "Tajinan",
+      "district": {
+        "id": 255,
+        "name": "Kabupaten Malang"
+      },
+      "province": {
+        "id": 11,
+        "name": "Jawa Timur"
+      },
+      "fullname": "Tajinan, Kabupaten Malang, Jawa Timur",
+      "postal_code": [
+        "65172"
+      ]
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 1,
+      "count": 1,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": {}
+    }
+  }
+}
+```
+Get region data that will be used when [creating a new customer](/#create-customer)
+
+### Endpoint
+`GET https://api.ngorder.id/api/open/region`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer token
+
+### Query
+Parameter | Type | Description
+--------- | ---- | -----------
+keyword `(optional)` | string | District name
+per_page `(optional)` | integer | Data per page. Default `1`
+pagination_offset | integer | Page number. Default `1`
+
 # Customer
-## Customer Category
+## Create Customer
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+{
+  "response": "Success",
+  "data": {
+    "customer_id": 123,
+    "name": "Budi"
+  }
+}
+```
+Create a customer
+
+### Endpoint
+`POST https://api.ngorder.id/api/open/customer/create`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+name | string | Customer's name
+phone | numeric | Customer's phone number
+district_id | numeric | District ID taken from [Region](/#region)
+address | string | Customer's detailed address
+postal_code `(optional)` | numeric | Postal code
+category | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+line `(optional)` | string | Customer's Line ID
+email `(optional)` | string | Customer's email
+other `(optional)` | string | Customer's other contacts
+is_active | string | Customer's activation status. Available values: `Y` (active), `N`  (non-active), `R` (requested customer) or `T` (unactivated Storefront customer email)
+
+
+## Privor Activation
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+Activate or deactivate customer's Storefront account
+
+### Endpoint
+`POST https://api.ngorder.id/api/open/customer/privor-activation`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+id | integer | Customer's ID
+active | boolean | Activation status
+email | string | Customer's email
+name `(optional)` | string | Customer's new name
+phone `(optional)` | numeric | Customer's new phone number 
+
+
+## Get Customers
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+Get customers
+
+### Endpoint
+`GET https://api.ngorder.id/api/open/customer`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer Token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+keyword `(optional)` | string | Keyword to look for. Max 50
+type `(optional)` | string | Filter type. Available values: `NAME`, `EMAIL`, `PHONE` or `ADDRESS`
+create_from `(optional)` | string | Filter customer created from this date. Format `yyyy-mm-dd`
+create_to `(optional)` | string | Filter customer created to this date. Format `yyyy-mm-dd`
+category | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+registration_status `(optional)` | string | Customer's registration status. Available values: `0` (unregistered), `1` (registered), `4` (blocked), `T` (inactive) or `R` (requested)
+order_by `(optional)` | string | Order customers data. Available status: `LATEST_CUSTOMER` or `LAST_ORDER`
+per_page `(optional)` | integer | Data per page. Default `10`. Max `100`
+pagination_offset `(optional)` | integer | Page number. Default `1`
+
+## Get Customer Order Histories
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+--
+
+### Endpoint
+` https://api.ngorder.id/api/open/`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer Token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+
+## Customer per Month
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+--
+
+### Endpoint
+` https://api.ngorder.id/api/open/`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer Token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+
+## Download Customers Data
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+--
+
+### Endpoint
+` https://api.ngorder.id/api/open/`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer Token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+
+## Update Customer Activation Status
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+--
+
+### Endpoint
+` https://api.ngorder.id/api/open/`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer Token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+
+## Update Customer
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+--
+
+### Endpoint
+` https://api.ngorder.id/api/open/`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer Token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+
+
+##
+> Example request:
+
+```json
+
+```
+> Example response:
+
+```json
+
+```
+--
+
+### Endpoint
+` https://api.ngorder.id/api/open/`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+token | string | Bearer Token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+
+
+
+
+# Customer
 ## Customer Create
 ## Customer Read
 ## Customer Update
