@@ -4,15 +4,23 @@
         <th>Value</th>
     </tr>
     <tr>
-        <td>id</td>
-        <td>`int` Product wholesale ID</td>
+        <td>name</td>
+        <td>`string` Order cost name</td>
     </tr>
     <tr>
-        <td>from</td>
-        <td>`int` Minimum products bought before wholesale is applied</td>
+        <td>category</td>
+        <td>`string` Cost category. Available values: `DISCOUNT`, `OTHER COST` or `INSURANCE`</td>
     </tr>
     <tr>
-        <td>price</td>
-        <td>`int` Product wholesale price</td>
+        <td>type</td>
+        <td>`string` Cost type. Available values: `NOMINAL` or `PERCENTAGE`</td>
+    </tr>
+    <tr>
+        <td>percentage</td>
+        <td>`integer` Order cost percentage. Required if `type: PERCENTAGE`</td>
+    </tr>
+    <tr>
+        <td>nominal</td>
+        <td>`integer` Order cost nominal. Required if `type: NOMINAL`</td>
     </tr>
 </table>
