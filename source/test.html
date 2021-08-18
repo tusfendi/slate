@@ -1,26 +1,52 @@
+<!-- discount -->
+
 <table>
-    <tr>
-        <th>Key</th>
-        <th>Value</th>
-    </tr>
-    <tr>
-        <td>name</td>
-        <td>`string` Order cost name</td>
-    </tr>
-    <tr>
-        <td>category</td>
-        <td>`string` Cost category. Available values: `DISCOUNT`, `OTHER COST` or `INSURANCE`</td>
-    </tr>
-    <tr>
-        <td>type</td>
-        <td>`string` Cost type. Available values: `NOMINAL` or `PERCENTAGE`</td>
-    </tr>
-    <tr>
-        <td>percentage</td>
-        <td>`integer` Order cost percentage. Required if `type: PERCENTAGE`</td>
-    </tr>
-    <tr>
-        <td>nominal</td>
-        <td>`integer` Order cost nominal. Required if `type: NOMINAL`</td>
-    </tr>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td>`string` Discount type. Available values: `PERCENTAGE` or `NOMINAL`</td>
+  </tr>
+  <tr>
+    <td>amount</td>
+    <td>`integer` Discount amount. Either nominal or percentage discount</td>
+  </tr>
+  <tr>
+    <td>max_nominal `(optional)`</td>
+    <td>`integer` Maximum discount amount applied</td>
+  </tr>
 </table>
+
+<!-- limits -->
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>usage_per_customer `(optional)`</td>
+    <td>
+      `string` Usage per customer limit. Available values: `1 to 9` or leave
+      empty for unlimited usage
+    </td>
+  </tr>
+  <tr>
+    <td>promo_limit `(optional)`</td>
+    <td>`string` Total promo quota. Leave empty if unlimited</td>
+  </tr>
+  <tr>
+    <td>minimum_product `(optional)`</td>
+    <td>`integer` Minimum purchase of products before this promo applies</td>
+  </tr>
+  <tr>
+    <td>minimum_transaction `optional`</td>
+    <td>`integer` Minimum cost before this promo applies</td>
+  </tr>
+</table>
+
+<!-- selected items -->
+
+<table><tr><th>Key</th><th>Value</th></tr><tr><td>products `optional`</td><td>`[]integer` List of products ID taken from [Get Products](/#get-products). Required if`all_products: false` and `type: PRODUCT`</td></tr><tr><td>platforms</td><td>`[]string` List of platforms. Available values:`ORDER_APP`, `PROMO`, `PRIVOR`, `STOREFRONT` or `QUICK_ORDER`</td></tr><tr><td>couriers</td><td>`[]string` List of couriers ID taken from [Get Expeditions](/#get-expeditions)</td></tr></table>
