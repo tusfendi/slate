@@ -117,7 +117,7 @@ Get user all users data within your shop
 ### Header
 Parameter | type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ## Update Profile
 > Example response:
@@ -138,7 +138,7 @@ token | string | Bearer token
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -202,7 +202,7 @@ password_confirmation `(optional)` | string | User password confirmation. Requir
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ## Update Detailed Info
 > Example response:
@@ -223,7 +223,7 @@ Update your shop info.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -253,7 +253,7 @@ Upload shop logo.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -284,7 +284,7 @@ Update general shop info.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -316,7 +316,7 @@ Create product category.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -348,7 +348,7 @@ Get product categories.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ## Get Category Detail
 > Example response:
@@ -370,7 +370,7 @@ Get single product category.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -397,7 +397,7 @@ Update product category.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -425,7 +425,7 @@ Delete a product category.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -469,7 +469,7 @@ Generate SKU for product.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -509,7 +509,7 @@ Validate product SKU.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -603,7 +603,7 @@ Create a product.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -737,14 +737,14 @@ Get product list.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 keyword `(optional)` | string | Product name or product variation SKU to look for
 shop_id `(optional)` | integer | Shop ID
-category `(optional)` | string | Product category. Available values: `UNCATEGORIZED`, `ARCHIVED` or the ID of [Product Category](/#product-category) that has been created
+category `(optional)` | string | Product category. Available values: `UNCATEGORIZED`, `ARCHIVED` or the ID of [Product Category](#product-category) that has been created
 type `(optional)` | string | Product stock type. Available values: `S` (own stock), `R` (from other suppliers), `PO` (preorder)
 price `(optional)` | string | Product price status. Available values: `NON_SET_PRICE` or `NON_PROFIT`
 channel `(optional)` | string | Product integration channel. Available values: `JURNAL` or `SHOPEE`
@@ -832,7 +832,7 @@ Get product detail
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -865,7 +865,7 @@ Check product stock.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -900,7 +900,7 @@ Get stock data of product variant in warehouses.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -982,7 +982,7 @@ Get product variations.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -1043,13 +1043,13 @@ Get product variant histories.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 id | integer | Product variant ID
-warehouse_id `(optional)` | integer | Variant warehouse ID taken from [Get Warehouse](/#get-warehouses)
+warehouse_id `(optional)` | integer | Variant warehouse ID taken from [Get Warehouse](#get-warehouses)
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
 per_page `(optional)` | integer | Data per page. Default `10`
@@ -1075,7 +1075,7 @@ Get minimum purchase of products before wholesale applies
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -1172,7 +1172,7 @@ Update a product.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1189,12 +1189,12 @@ shop_id | integer | Shop ID
 user_id | integer | User ID
 discount | integer | Product discount amount
 wholesale_status | string | Product wholesale status. Available values: `Y` or `N`
-wholesale `(optional)` | [][Wholesale](/#update-product-wholesale-data) | Wholesale data
+wholesale `(optional)` | [][Wholesale](#update-product-wholesale-data) | Wholesale data
 is_warehouse `(optional)` | integer | Product warehouse status. Available value: `1` or `0`. Default: `0`
 publish_status | string | Product publish status. Available values: `Y` or `N`
 show_stock | string | Show product stock in Storefront or Privor status. Available value: `Y` or `N`
 has_variation | string | Product variation status. Available value: `Y` or `N`
-variations `(optional)` | [][Variations](/#update-product-variations-data) | Product variations details
+variations `(optional)` | [][Variations](#update-product-variations-data) | Product variations details
 
 <span id="update-product-wholesale-data"></span>
 
@@ -1286,7 +1286,7 @@ Update product stock
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1330,7 +1330,7 @@ Sync product variant stock.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1355,12 +1355,12 @@ Download products data as Excel and send it to your email.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-category `(optional)` | string | Product category. Available values: `UNCATEGORIZED`, `ARCHIVED` or the ID of [Product Category](/#product-category) that has been created
+category `(optional)` | string | Product category. Available values: `UNCATEGORIZED`, `ARCHIVED` or the ID of [Product Category](#product-category) that has been created
 price `(optional)` | string | Product price status. Available values: `NON_SET_PRICE` or `NON_PROFIT`
 channel `(optional)` | string | Product integration channel. Available values: `JURNAL` or `SHOPEE`
 order_by `(optional)` | string | Order the data. Available values: `NEWEST`, `LONGEST`, `CHEAPEST`, `EXPENSIVE`, `LEAST_STOCK`, `MOST_STOCK`, `ASC` or `DESC`
@@ -1394,7 +1394,7 @@ Delete product variations.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1430,7 +1430,7 @@ Delete products.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1469,7 +1469,7 @@ Create a customer category
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1541,7 +1541,7 @@ Get all customer category
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -1577,7 +1577,7 @@ Update customer category
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1626,7 +1626,7 @@ wholesale_access `(optional)` | string | Wholesale access for this category
   }
 }
 ```
-Get region data that will be used when [creating a new customer](/#create-customer)
+Get region data that will be used when [creating a new customer](#create-customer)
 
 ### Endpoint
 `GET https://api.ngorder.id/api/open/region`
@@ -1634,7 +1634,7 @@ Get region data that will be used when [creating a new customer](/#create-custom
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -1669,17 +1669,17 @@ Create a customer
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 name | string | Customer's name
 phone | numeric | Customer's phone number
-district_id | numeric | District ID taken from [Region](/#region)
+district_id | numeric | District ID taken from [Region](#region)
 address | string | Customer's detailed address
 postal_code `(optional)` | numeric | Postal code
-category | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+category | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 line `(optional)` | string | Customer's Line ID
 email `(optional)` | string | Customer's email
 other `(optional)` | string | Customer's other contacts
@@ -1708,7 +1708,7 @@ Activate or deactivate customer's Storefront account
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1786,7 +1786,7 @@ Get customers
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1795,7 +1795,7 @@ keyword `(optional)` | string | Customer name to look for. Max 50
 type `(optional)` | string | Filter type. Available values: `NAME`, `EMAIL`, `PHONE` or `ADDRESS`
 create_from `(optional)` | string | Filter customer created from this date. Format `yyyy-mm-dd`
 create_to `(optional)` | string | Filter customer created to this date. Format `yyyy-mm-dd`
-category | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+category | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 registration_status `(optional)` | string | Customer's registration status. Available values: `0` (unregistered), `1` (registered), `4` (blocked), `T` (inactive) or `R` (requested)
 order_by `(optional)` | string | Order customers data. Available status: `LATEST_CUSTOMER` or `LAST_ORDER`
 per_page `(optional)` | integer | Data per page. Default `10`. Max `100`
@@ -1875,7 +1875,7 @@ Get customer order histories
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -1921,7 +1921,7 @@ Get count of customers addes per month.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 ## Download Customers Data
@@ -1945,7 +1945,7 @@ Download customers data as Excel and send it to your email.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -1979,14 +1979,14 @@ Change customer activation status
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 id | integer | Customer's ID
 status | string | Customer's status. Available values: `0` (refuse), `1` (accept), `2` (activate), `4` (block), `5` (delete), `6` (unblock)
-category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 
 
 ## Update Customer
@@ -2014,17 +2014,17 @@ Update customer's data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 name `(optional)` | string | Customer's name
 phone `(optional)` | numeric | Customer's phone number
-district_id `(optional)` | numeric | District ID taken from [Region](/#region)
+district_id `(optional)` | numeric | District ID taken from [Region](#region)
 address `(optional)` | string | Customer's detailed address
 postal_code `(optional)` | numeric | Postal code
-category `(optionl)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+category `(optionl)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 line `(optional)` | string | Customer's Line ID
 email `(optional)` | string | Customer's email
 other `(optional)` | string | Customer's other contacts
@@ -2094,7 +2094,7 @@ Get our main bank data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -2137,7 +2137,7 @@ Get Xendit listed bank data
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -2170,12 +2170,12 @@ Create bank account used in your shop.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-bank_type | string | Bank type taken from [master data](/#get-master-data)
+bank_type | string | Bank type taken from [master data](#get-master-data)
 account_number | numeric | Bank account number
 holder_name | string | Bank account holder name
 branch | string | Bank branch
@@ -2225,7 +2225,7 @@ Get bank data used in your shop.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -2260,7 +2260,7 @@ Get detail of bank account used in your shop.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -2292,13 +2292,13 @@ Update bank account used in your shop.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 bank_id | integer | Bank ID
-bank_type | string | Bank type taken from [master data](/#get-master-data)
+bank_type | string | Bank type taken from [master data](#get-master-data)
 account_number `(optional)` | numeric | Bank account number
 holder_name `(optional)` | string | Bank account holder name
 branch `(optional)` | string | Bank branch
@@ -2331,7 +2331,7 @@ Delete selected bank mutation.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -2360,7 +2360,7 @@ Delete bank account used in your shop.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -2393,13 +2393,13 @@ Create supplier.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 name | string | Supplier name
-district_id | numeric | District ID taken from [Region](/#region)
+district_id | numeric | District ID taken from [Region](#region)
 addess | string | Supplier detailed address
 phone | numeric | Supplier phone number
 description | string | Data description
@@ -2454,7 +2454,7 @@ Get all suppliers
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ## Update Supplier
 > Example request:
@@ -2481,14 +2481,14 @@ Update supplier data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 supplier_id | integer | Supplier ID
 name `(optional)` | string | Supplier name
-district_id `(optional)` | numeric | District ID taken from [Region](/#region)
+district_id `(optional)` | numeric | District ID taken from [Region](#region)
 addess `(optional)` | string | Supplier detailed address
 phone `(optional)` | numeric | Supplier phone number
 description `(optional)` | string | Data description
@@ -2519,13 +2519,13 @@ Create a warehouse.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 warehouse | string | Warehouse name
-supplier_id | integer | Supplier ID taken from [supplier](/#supplier)
+supplier_id | integer | Supplier ID taken from [supplier](#supplier)
 user_id | []integer | User ID for this warehouse admin
 is_active | boolean | Warehouse active status
 
@@ -2563,7 +2563,7 @@ Get all warehouse data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -2597,7 +2597,7 @@ Get warehouse detailed data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -2629,14 +2629,14 @@ Update a warehouse.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 id | integer | Warehouse ID
 warehouse | string | Warehouse name
-supplier_id | integer | Supplier ID taken from [supplier](/#supplier)
+supplier_id | integer | Supplier ID taken from [supplier](#supplier)
 user_id | []integer | User ID for this warehouse admin
 is_active | boolean | Warehouse active status
 
@@ -2667,7 +2667,7 @@ Delete selected warehouse.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -2725,7 +2725,7 @@ Get all expeditions data
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ## Get Active List
 > Example request:
@@ -2777,7 +2777,7 @@ Get expedition enabled for your shop. You can manage this by going <a href="http
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -2882,13 +2882,13 @@ Get expedition cost.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-origin_id | integer | District ID taken from [Region](/#region)
-destination_id | numeric | District ID taken from [Region](/#region)
+origin_id | integer | District ID taken from [Region](#region)
+destination_id | numeric | District ID taken from [Region](#region)
 weight | integer | Total product weight
 price | integer | Total price without shipping cost
 is_privor `(optional)` | boolean | Privor status. Default `false`
@@ -2965,13 +2965,13 @@ Track air waybill number
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 awb_number | string | Air waybill number
-expedition_id | integer | Expedition ID taken from [Get Expeditions](/#get-expeditions)
+expedition_id | integer | Expedition ID taken from [Get Expeditions](#get-expeditions)
 order_id | integer | Order ID
 # Marketplace
 ## Get Marketplaces
@@ -3028,7 +3028,7 @@ Get marketplaces.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 # Order Source
 ## Create Order Source
@@ -3056,12 +3056,12 @@ Create an order source
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-marketplace_id | integer | Marketplace ID taken from [Marketplaces](/#get-marketplaces)
+marketplace_id | integer | Marketplace ID taken from [Marketplaces](#get-marketplaces)
 note | string | Order source name
 
 ## Get Order Sources
@@ -3128,7 +3128,7 @@ Get order sources.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -3160,13 +3160,13 @@ Update an order source
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 order_source_id | integer | Order source ID
-marketplace_id `(optional)` | integer | Marketplace ID taken from [Marketplaces](/#get-marketplaces)
+marketplace_id `(optional)` | integer | Marketplace ID taken from [Marketplaces](#get-marketplaces)
 note `(optional)` | string | Order source name
 status `(optional)` | string | Active status. Available values: `Y` or `N`
 
@@ -3199,7 +3199,7 @@ Create an order cost
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -3260,7 +3260,7 @@ Get all order costs.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ## Update Order Cost
 > Example request:
@@ -3287,7 +3287,7 @@ Update an order cost
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -3323,7 +3323,7 @@ Create an order cost
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -3353,17 +3353,17 @@ Search for available products to add to the promo.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 keyword | string | Product name to look for. Min: 3. Max: 50
 type | string | Promo type. Available values: `PRODUCT` or `EXPEDITION`
-id `(optional)` | string | Promo ID taken from [Get Promos](/#get-promos). Fill this if you want to check a certain promo
+id `(optional)` | string | Promo ID taken from [Get Promos](#get-promos). Fill this if you want to check a certain promo
 start_date `(optional)` | string | Start date range to search for promo. Format `yyyy-mm-dd`
 end_date `(optional)` | string | End date range to search for promo. Format `yyyy-mm-dd`
-couriers `(optional)` | integer | Couriers ID taken from [Get Expeditions](/#get-expeditions)
+couriers `(optional)` | integer | Couriers ID taken from [Get Expeditions](#get-expeditions)
 group | string | Promo group. Available values: `PROMO` or `COUPON`
 per_page `(optional)` | integer | Data per page. Default `10`. Max `100`
 pagination_offset `(optional)` | integer | Page number. Default `1`
@@ -3440,7 +3440,7 @@ Create a promo.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -3454,9 +3454,9 @@ end_date | string | Promo end date. Format `yyyy-mm-dd hh:mm`.
 discount | array | Discount detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>type</td><td>`string` Discount type. Available values: `PERCENTAGE` or `NOMINAL`</td></tr><tr><td>amount</td><td>`integer` Discount amount. Either nominal or percentage discount</td></tr><tr><td>max_nominal `(optional)`</td><td>`integer` Maximum discount amount applied</td></tr></table>
 limits | array | Limits detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>usage_per_customer `(optional)`</td><td> `string` Usage per customer limit. Available values: `1 to 9` or leave empty for unlimited usage</td></tr><tr><td>promo_limit `(optional)`</td><td>`string` Total promo quota. Leave empty if unlimited</td></tr><tr><td>minimum_product `(optional)`</td><td>`integer` Minimum purchase of products before this promo applies</td></tr><tr><td>minimum_transaction `optional`</td><td>`integer` Minimum cost before this promo applies</td></tr></table>
 is_active | boolean | Promo activation status
-customer_categories | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+customer_categories | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 all_products | boolean | Promo applies to all product
-selected_items | array | Selected items detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>products `optional`</td><td>`[]integer` List of products ID taken from [Get Products](/#get-products). Required if`all_products: false` and `type: PRODUCT`</td></tr><tr><td>platforms</td><td>`[]string` List of platforms. Available values:`ORDER_APP`, `PROMO`, `PRIVOR`, `STOREFRONT` or `QUICK_ORDER`</td></tr><tr><td>couriers</td><td>`[]string` List of couriers ID taken from [Get Expeditions](/#get-expeditions)</td></tr></table>
+selected_items | array | Selected items detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>products `optional`</td><td>`[]integer` List of products ID taken from [Get Products](#get-products). Required if`all_products: false` and `type: PRODUCT`</td></tr><tr><td>platforms</td><td>`[]string` List of platforms. Available values:`ORDER_APP`, `PROMO`, `PRIVOR`, `STOREFRONT` or `QUICK_ORDER`</td></tr><tr><td>couriers</td><td>`[]string` List of couriers ID taken from [Get Expeditions](#get-expeditions)</td></tr></table>
 
 
 
@@ -3518,7 +3518,7 @@ Get list of promos you have.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -3646,12 +3646,12 @@ Get detailed promo info.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Promo ID taken from [Get Promos](/#get-promos)
+id | integer | Promo ID taken from [Get Promos](#get-promos)
 
 
 
@@ -3728,12 +3728,12 @@ Update a promo.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Promo ID taken from [Get Promos](/#get-promos)
+id | integer | Promo ID taken from [Get Promos](#get-promos)
 group | string | Promo group. Available values: `PROMO` or `COUPON`.
 type | string | Promo type. Available values: `PRODUCT` or `EXPEDITION`
 name | string | Promo name
@@ -3742,9 +3742,9 @@ start_date | string | Promo start date. Format `yyyy-mm-dd hh:mm`. Cannot be les
 end_date | string | Promo end date. Format `yyyy-mm-dd hh:mm`.
 limits | array | Limits detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>usage_per_customer `(optional)`</td><td> `string` Usage per customer limit. Available values: `1 to 9` or leave empty for unlimited usage</td></tr><tr><td>promo_limit `(optional)`</td><td>`string` Total promo quota. Leave empty if unlimited</td></tr><tr><td>minimum_product `(optional)`</td><td>`integer` Minimum purchase of products before this promo applies</td></tr><tr><td>minimum_transaction `optional`</td><td>`integer` Minimum cost before this promo applies</td></tr></table>
 is_active | boolean | Promo activation status
-customer_categories | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+customer_categories | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 all_products | boolean | Promo applies to all product
-selected_items | array | Selected items detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>products `optional`</td><td>`[]integer` List of products ID taken from [Get Products](/#get-products). Required if`all_products: false` and `type: PRODUCT`</td></tr><tr><td>platforms</td><td>`[]string` List of platforms. Available values:`ORDER_APP`, `PROMO`, `PRIVOR`, `STOREFRONT` or `QUICK_ORDER`</td></tr><tr><td>couriers</td><td>`[]string` List of couriers ID taken from [Get Expeditions](/#get-expeditions)</td></tr></table>
+selected_items | array | Selected items detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>products `optional`</td><td>`[]integer` List of products ID taken from [Get Products](#get-products). Required if`all_products: false` and `type: PRODUCT`</td></tr><tr><td>platforms</td><td>`[]string` List of platforms. Available values:`ORDER_APP`, `PROMO`, `PRIVOR`, `STOREFRONT` or `QUICK_ORDER`</td></tr><tr><td>couriers</td><td>`[]string` List of couriers ID taken from [Get Expeditions](#get-expeditions)</td></tr></table>
 
 
 
@@ -3773,12 +3773,12 @@ Delete a promo.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-Promo ID taken from [Get Promos](/#get-promos)
+Promo ID taken from [Get Promos](#get-promos)
 
 
 
@@ -3804,7 +3804,7 @@ m
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -3839,7 +3839,7 @@ Get wholesale prices of selected product variant.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -3872,7 +3872,7 @@ Get customer category price access.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -3978,21 +3978,21 @@ Create an order.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-customer_sender_id | integer |  Customer sender ID taken from [Customer](/#customer)
-customer_receiver_id | integer | Customer receiver ID taken from [Customer](/#customer)
-supplier_id | integer | Supplier ID taken from [Supplier](/#supplier)
+customer_sender_id | integer |  Customer sender ID taken from [Customer](#customer)
+customer_receiver_id | integer | Customer receiver ID taken from [Customer](#customer)
+supplier_id | integer | Supplier ID taken from [Supplier](#supplier)
 order_date | string | Order date. Format `yyyy-mm-dd`
-order_source_id `(optional)` | integer | Order source ID taken from [Order Source](/#order-source)
+order_source_id `(optional)` | integer | Order source ID taken from [Order Source](#order-source)
 note `(optional)` | string | Note for the order
 is_print | boolean | Order print status
 products | array | Product variants detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Product variant ID</td></tr><tr><td>qty</td><td>`integer` Product quantity</td></tr><tr><td>warehouse_id `(optional)`</td><td>`integer` Product variant warehouse ID taken from [Get Warehouses](#get-warehouses)</td></tr><tr><td>product_status</td><td>`string` Product stock type `S` (own stock), `R` (from other suppliers) or `PO` (preorder)</td></tr><tr><td>type `(optional)`</td><td>`string` Product discount type. Available values: `NOMINAL` or `PERCENTAGE`</td></tr><tr><td>percentage `(optional)`</td><td>`integer` Discount percentage. Required if `type: PERCENTAGE`</td></tr><tr><td>nominal `(optional)`</td><td>`integer` Discount nominal. Required if `type: NOMINAL`</td></tr><tr><td>flag `(optional)`</td><td>`string` Product update status. Available values: `EDIT`, `NEW` or `DELETE`</td></tr><tr><td>discount_promo `(optional)`</td><td>`integer` Product promo discount nominal. If this filled product discount will be removed</td></tr><tr><td>promo_id `(optional)`</td><td>`integer` Promo ID</td></tr></table>
-expedition | array | Expedition detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Expedition ID</td></tr><tr><td>rate</td><td>`integer` Expedition cost</td></tr><tr><td>name</td><td>`string` Expedition name</td></tr><tr><td>auto_pickup</td><td>`boolean` Expedition auto pickup status</td></tr><tr><td>discount_promo `(optional)`</td><td>`integer` Expedition discount nominal</td></tr><tr><td>promo `(optional)`</td><td>`array` Promo detail from [Product Variants](/#get-product-variations)</td></tr></table>
-payment | array | Payment detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>status</td><td>`string` Payment status. Available values: `PAID`, `INSTALLMENT` or `UNPAID`</td></tr><tr><td> date `(optional)` </td><td>`string` Payment date. Required if `status: PAID or INSTALLMENT`. Format `yyy-mm-dd`</td></tr><tr><td>bank_id `(optional)` </td><td>`integer` Bank ID. Required if `status: PAID or INSTALLMENT` taken from [Bank Accounts](/#get-shop-bank-accounts)</td></tr><tr><td>amount</td><td>`integer` Payment amount. Required if `status: PAID or INSTALLMENT`</td></tr><tr><td>cost_of_goods_sales `(optional)` </td><td>`integer` Cost to be paid to the supplier. Required if `product_status: R` (see [Create a Product](/#create-product))</td></tr></table>
+expedition | array | Expedition detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Expedition ID</td></tr><tr><td>rate</td><td>`integer` Expedition cost</td></tr><tr><td>name</td><td>`string` Expedition name</td></tr><tr><td>auto_pickup</td><td>`boolean` Expedition auto pickup status</td></tr><tr><td>discount_promo `(optional)`</td><td>`integer` Expedition discount nominal</td></tr><tr><td>promo `(optional)`</td><td>`array` Promo detail from [Product Variants](#get-product-variations)</td></tr></table>
+payment | array | Payment detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>status</td><td>`string` Payment status. Available values: `PAID`, `INSTALLMENT` or `UNPAID`</td></tr><tr><td> date `(optional)` </td><td>`string` Payment date. Required if `status: PAID or INSTALLMENT`. Format `yyy-mm-dd`</td></tr><tr><td>bank_id `(optional)` </td><td>`integer` Bank ID. Required if `status: PAID or INSTALLMENT` taken from [Bank Accounts](#get-shop-bank-accounts)</td></tr><tr><td>amount</td><td>`integer` Payment amount. Required if `status: PAID or INSTALLMENT`</td></tr><tr><td>cost_of_goods_sales `(optional)` </td><td>`integer` Cost to be paid to the supplier. Required if `product_status: R` (see [Create a Product](#create-product))</td></tr></table>
 order_cost `(optional)` | array | Other cost detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>name</td><td>`string` Order cost name</td></tr><tr><td>category</td><td>`string` Cost category. Available values: `DISCOUNT`, `OTHER COST` or `INSURANCE`</td></tr><tr><td>type</td><td>`string` Cost type. Available values: `NOMINAL` or `PERCENTAGE`</td></tr><tr><td>percentage `(optional)` </td><td>`integer` Order cost percentage. Required if `type: PERCENTAGE`</td></tr><tr><td>nominal `(optional)` </td><td>`integer` Order cost nominal. Required if `type: NOMINAL`</td></tr></table>
 awb_number `(optional)` | string | Air waybill number
 send_sms `(optional)` | boolean | SMS status. Default value: `false`
@@ -4032,13 +4032,13 @@ Add AWB number for created order.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Order ID taken from [Create Order](/#create-order)
-awb_number | string | Air waybill number
+id | integer | Order ID taken from [Create Order](#create-order) success response
+awb_number | string | Airway bill
 
 
 ## Get Orders
@@ -4152,7 +4152,7 @@ Get all data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -4161,15 +4161,15 @@ keyword `(optional)` | string | Keyword to look for
 payment_status `(optional)` | string | Filter by payment status. Available values: `UNPAID`, `PAID` or `INSTALLMENT`
 order_progress_status | string | Filter by order progress status. Available values: `UNPAID`, `NO AWB`, `ON PROCESS`, `DELIVERED`, `UNPROCESSED` or `INSTALLMENT`
 order_category `(optional)` | string | Source of created order. Available values: `APP`, `PRIVOR`, `STORE_FRONT`, `SHOPEE`, `QUICK_ORDER` or `UNCATEGORIZED`
-order_source_id `(optional)` | integer | Sales channel ID taken from [Order Source](/#get-order-sources)
+order_source_id `(optional)` | integer | Sales channel ID taken from [Order Source](#get-order-sources)
 type `(optional)` | string | Order type. Available values: `ORDER_ID`, `CUSTOMER_NAME`, `AWB_NUMBER`, `CUSTOMER_PHONE`, `SHOPEE_INVOICE`, `PRODUCT_NAME`, `SKU` or `SHIPPER_TRACKING`
 order_by `(optional)` | string | Order the data. Available values: `ORDER_DATE` or `PAYMENT_DATE`. Default value: `ORDER_DATE`
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`. Default value: 30 days ago
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`. Default value: today
 user_id `(optional)` | integer | The ID of admin who made this order
-bank_id `(optional)` | integer | Bank ID taken from [Bank Accounts](/#get-shop-bank-accounts)
+bank_id `(optional)` | integer | Bank ID taken from [Bank Accounts](#get-shop-bank-accounts)
 warehouse_id  `(optional)` |  integer | Product variant warehouse ID taken from [Get Warehouses](#get-warehouses)
-customer_category_code `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+customer_category_code `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 expedition_id `(optional)` | integer | Expedition ID. Available values: `1` (JNE), `2` (TIKI), `3` (POS), `4` (SICEPAT), `5` (WAHANA), `6` (JNT Express), `7` (Alfatrex), `8` (Lion Parcel), `9` (Ninja Xpress), `10` (SAP), `11` (RPX), `98` (pickup at shop) or `99` (manual input)
 pickup `(optional)` | integer | Pickup status. Available values: `0` (ready to send), `1` (pickup request) or `2` (delivered)
 print_status `(optional)` | string | Print status. Available value: `Y` or `N`
@@ -4421,7 +4421,7 @@ Get list of orders detail
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -4450,7 +4450,7 @@ pagination_offset `(optional)` | integer | Page number. Default `1`
 {
   "data": {
     "order_id": 1352,
-    "po_number": 10746,
+    "po_number": 123,
     "shop_id": 7,
     "order_date": "2020-11-19 00:00:00",
     "sender": {
@@ -4601,12 +4601,19 @@ Get single order detail
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 id | integer | Order ID
+
+
+
+
+
+
+
 
 
 ## Get Payment Histories
@@ -4652,7 +4659,7 @@ Get order payment histories.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -4701,7 +4708,7 @@ Get revenue insights, items sold and total orders made by admin.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -4731,7 +4738,7 @@ Download order data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -4739,16 +4746,16 @@ Parameter | Type | Description
 payment_status `(optional)` | string | Order payment status. Available status: `UNPAID`, `PAID` or `INSTALLMENT`
 order_progress_status `(optional)` | Order progress status. Available status: `UNPAID`, `NO AWB`, `ON PROCESS`, `DELIVERED`, `UNPROCESSED` or `INSTALLMENT`
 order_category `(optional)` | string | Source of created order. Available values: `APP`, `PRIVOR`, `STORE_FRONT`, `SHOPEE`, `QUICK_ORDER` or `UNCATEGORIZED`
-order_source_id `(optional)` | integer | Sales channel ID taken from [Order Source](/#get-order-sources)
+order_source_id `(optional)` | integer | Sales channel ID taken from [Order Source](#get-order-sources)
 type `(optional)` | string | Filter type. Available values: `ORDER_ID`, `CUSTOMER_NAME`, `AWB_NUMBER`, `CUSTOMER_PHONE`, `SHOPEE_INVOICE`, `PRODUCT_NAME`, `SKU` or `SHIPPER_TRACKING`
 keyword `(optional)` | string | Keyword to look for
 order_by `(optional)` | string | Order the data. Available values: `ORDER_DATE` or `PAYMENT_DATE`
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`. Default values: 30 days ago
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`. Default values: today
 user_id `(optional)` | integer | User ID
-bank_id `(optional)` | integer | Bank ID taken from [Bank Accounts](/#get-shop-bank-accounts)
+bank_id `(optional)` | integer | Bank ID taken from [Bank Accounts](#get-shop-bank-accounts)
 warehouse_id  `(optional)` |  integer | Product variant warehouse ID taken from [Get Warehouses](#get-warehouses)
-customer_category_code `(optional)` | integer | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+customer_category_code `(optional)` | integer | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 expedition_id `(optional)` | integer | Expedition ID. Available values: `1` (JNE), `2` (TIKI), `3` (POS), `4` (SICEPAT), `5` (WAHANA), `6` (JNT Express), `7` (Alfatrex), `8` (Lion Parcel), `9` (Ninja Xpress), `10` (SAP), `11` (RPX), `98` (pickup at shop) or `99` (manual input)
 pickup `(optional)` | integer | Pickup status. Available values: `0` (ready to send), `1` (pickup request) or `2` (delivered)
 print_status `(optional)` | string | Print status. Available value: `Y` or `N`
@@ -4816,13 +4823,13 @@ Update order payment.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Order ID taken from [Get Orders](/#get-orders)
-payment | array | Payment details <table><tr><th>Key</th><th>Value</th></tr><tr><td>status</td><td>`integer` Payment status. Available values: `PAID` or `INSTALLMENT`</td></tr><tr><td>date</td><td>`string` Payment date. Format `yyyy-mm-dd`</td></tr><tr><td>bank_id</td><td>`integer` Bank ID taken from [Bank Accounts](/#get-shop-bank-accounts)</td></tr><tr><td>amount `(optional)`</td><td>`integer` Payment amount. Required if `status: INSTALLMENT`</td></tr><tr><td>cost_of_goods_sales</td><td>`integer` Cost to be paid to the supplier. Required if `product_status: R` (see [Create a Product](/#create-product))</td></tr></table>
+id | integer | Order ID taken from [Get Orders](#get-orders)
+payment | array | Payment details <table><tr><th>Key</th><th>Value</th></tr><tr><td>status</td><td>`integer` Payment status. Available values: `PAID` or `INSTALLMENT`</td></tr><tr><td>date</td><td>`string` Payment date. Format `yyyy-mm-dd`</td></tr><tr><td>bank_id</td><td>`integer` Bank ID taken from [Bank Accounts](#get-shop-bank-accounts)</td></tr><tr><td>amount `(optional)`</td><td>`integer` Payment amount. Required if `status: INSTALLMENT`</td></tr><tr><td>cost_of_goods_sales</td><td>`integer` Cost to be paid to the supplier. Required if `product_status: R` (see [Create a Product](#create-product))</td></tr></table>
 
 
 ## Update Order
@@ -4843,23 +4850,21 @@ Update existing order.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-order_id | integer | Order ID
-customer_sender_id | integer |  Customer sender ID taken from [Customer](/#customer)
-customer_receiver_id | integer | Customer receiver ID taken from [Customer](/#customer)
-supplier_id | integer | Supplier ID taken from [Supplier](/#supplier)
-order_source_id `(optional)` | integer | Order source ID taken from [Order Source](/#order-source)
+order_id | integer | Order ID taken from [Get Orders](#get-orders)
+customer_sender_id | integer |  Customer sender ID taken from [Customer](#customer)
+customer_receiver_id | integer | Customer receiver ID taken from [Customer](#customer)
+supplier_id | integer | Supplier ID taken from [Supplier](#supplier)
+order_source_id `(optional)` | integer | Order source ID taken from [Order Source](#order-source)
 note `(optional)` | string | Note for the order
 is_print | boolean | Order print status
-products | array | Product variants detail
-
-
-expedition | array | Expedition detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Expedition ID</td></tr><tr><td>rate</td><td>`integer` Expedition cost</td></tr><tr><td>name</td><td>`string` Expedition name</td></tr><tr><td>auto_pickup</td><td>`boolean` Expedition auto pickup status</td></tr><tr><td>discount_promo `(optional)`</td><td>`integer` Expedition discount nominal</td></tr><tr><td>promo `(optional)`</td><td>`array` Promo detail from [Product Variants](/#get-product-variations)</td></tr></table>
-payment | array | Payment detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>status</td><td>`string` Payment status. Available values: `PAID`, `INSTALLMENT` or `UNPAID`</td></tr><tr><td> date `(optional)` </td><td>`string` Payment date. Required if `status: PAID or INSTALLMENT`. Format `yyy-mm-dd`</td></tr><tr><td>bank_id `(optional)` </td><td>`integer` Bank ID. Required if `status: PAID or INSTALLMENT` taken from [Bank Accounts](/#get-shop-bank-accounts)</td></tr><tr><td>amount</td><td>`integer` Payment amount. Required if `status: PAID or INSTALLMENT`</td></tr><tr><td>cost_of_goods_sales `(optional)` </td><td>`integer` Cost to be paid to the supplier. Required if `product_status: R` (see [Create a Product](/#create-product))</td></tr></table>
+products | array | Product variants detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Product variant ID</td></tr><tr><td>qty</td><td>`integer` Product quantity</td></tr><tr><td>warehouse_id `(optional)`</td><td>`integer` Product variant warehouse ID taken from [Get Warehouses](#get-warehouses)</td></tr><tr><td>product_status</td><td>`string` Product stock type `S` (own stock), `R` (from other suppliers) or `PO` (preorder)</td></tr><tr><td>type `(optional)`</td><td>`string` Product discount type. Available values: `NOMINAL` or `PERCENTAGE`</td></tr><tr><td>percentage `(optional)`</td><td>`integer` Discount percentage. Required if `type: PERCENTAGE`</td></tr><tr><td>nominal `(optional)`</td><td>`integer` Discount nominal. Required if `type: NOMINAL`</td></tr><tr><td>flag `(optional)`</td><td>`string` Product update status. Available values: `EDIT`, `NEW` or `DELETE`</td></tr><tr><td>discount_promo `(optional)`</td><td>`integer` Product promo discount nominal. If this filled product discount will be removed</td></tr><tr><td>promo_id `(optional)`</td><td>`integer` Promo ID</td></tr></table>
+expedition | array | Expedition detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Expedition ID</td></tr><tr><td>rate</td><td>`integer` Expedition cost</td></tr><tr><td>name</td><td>`string` Expedition name</td></tr><tr><td>auto_pickup</td><td>`boolean` Expedition auto pickup status</td></tr><tr><td>discount_promo `(optional)`</td><td>`integer` Expedition discount nominal</td></tr><tr><td>promo `(optional)`</td><td>`array` Promo detail from [Product Variants](#get-product-variations)</td></tr></table>
+payment | array | Payment detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>status</td><td>`string` Payment status. Available values: `PAID`, `INSTALLMENT` or `UNPAID`</td></tr><tr><td> date `(optional)` </td><td>`string` Payment date. Required if `status: PAID or INSTALLMENT`. Format `yyy-mm-dd`</td></tr><tr><td>bank_id `(optional)` </td><td>`integer` Bank ID. Required if `status: PAID or INSTALLMENT` taken from [Bank Accounts](#get-shop-bank-accounts)</td></tr><tr><td>amount</td><td>`integer` Payment amount. Required if `status: PAID or INSTALLMENT`</td></tr><tr><td>cost_of_goods_sales `(optional)` </td><td>`integer` Cost to be paid to the supplier. Required if `product_status: R` (see [Create a Product](#create-product))</td></tr></table>
 order_cost `(optional)` | array | Other cost detail <table><tr><th>Key</th><th>Value</th></tr><tr><td>name</td><td>`string` Order cost name</td></tr><tr><td>category</td><td>`string` Cost category. Available values: `DISCOUNT`, `OTHER COST` or `INSURANCE`</td></tr><tr><td>type</td><td>`string` Cost type. Available values: `NOMINAL` or `PERCENTAGE`</td></tr><tr><td>percentage `(optional)` </td><td>`integer` Order cost percentage. Required if `type: PERCENTAGE`</td></tr><tr><td>nominal `(optional)` </td><td>`integer` Order cost nominal. Required if `type: NOMINAL`</td></tr></table>
 awb_number `(optional)` | string | Air waybill number
 send_sms `(optional)` | boolean | SMS status. Default value: `false`
@@ -4871,7 +4876,285 @@ source | string | Source platform. Available values: `MOBILE` or `WEB`
 
 
 
-## template
+
+
+## Delete Installment History
+> Example request:
+
+```json
+```
+
+> Example response:
+
+```json
+{
+  "response": "success",
+  "message": "Success, payment history has been deleted",
+  "data": null
+}
+```
+Delete installment payment history.
+
+### Endpoint
+`DELETE https://api.ngorder.id/api/open/order/installment/{order_id}`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Path
+Parameter | Type | Description
+--------- | ---- | -----------
+order_id | integer | Order ID taken from [Get Orders](#get-orders)
+
+
+
+
+
+
+# Cancel Order
+## Cancel an Order
+> Example request:
+
+```json
+```
+
+> Example response:
+
+```json
+{
+  "response": "success",
+  "message": "Order has been Canceled",
+  "data": {
+    "order_id": 1338,
+    "po_number": 10735
+  }
+}
+```
+Cancel created order.
+
+### Endpoint
+`POST https://api.ngorder.id/api/open/order/cancel`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+id | integer | Order ID taken from [Get Orders](#get-orders)
+
+
+
+
+
+
+
+
+## Get Canceled Orders
+> Example request:
+
+```json
+```
+
+> Example response:
+
+```json
+{
+  "data": [
+    {
+      "order_id": 566,
+      "po_number": 505,
+      "username": "user",
+      "invoice": "INV.2021.01.18.505",
+      "shop_id": 7,
+      "order_date": "2021-01-18 10:37:42",
+      "sender_name": "Tusfendi",
+      "sender_category": "PELANGGAN",
+      "sender_category_code": "N",
+      "sender_address": "Desa ABC",
+      "receiver_name": "Tusfendi",
+      "receiver_address": "Desa ABC, Kec. Srono, Kabupaten Banyuwangi, 68471, Jawa Timur",
+      "receiver_phone": "0812345678",
+      "total_amount": 0,
+      "remaining_amount": 0,
+      "shipping_id": 98,
+      "shipping_rate": "",
+      "shipping_logistic": "Ambil di Toko",
+      "shipping_cost": 0,
+      "weight": 2,
+      "note": "",
+      "origin_name": "A Supplier 1",
+      "origin_address": "Jalan Bondowoso",
+      "order_source": "",
+      "other_cost_amount": 0,
+      "order_progress_status": "NO AWB",
+      "order_status": "CANCELED",
+      "order_category": "APP",
+      "payment_status": "PAID",
+      "payment_date": "2021-01-18",
+      "products": [
+        {
+          "product_meta_id": 8055339,
+          "sku": null,
+          "name": "Kaos Yes Biru",
+          "price": 10000,
+          "quantity": 10,
+          "thumbnail_url": "https://s3-ap-southeast-1.amazonaws.com/technoidea/products/default.jpg",
+          "color": null,
+          "size": null
+        }
+      ],
+      "shopee": null,
+      "created_by_name": "tusfendi",
+      "created_at": "2021-01-18 10:37:42",
+      "updated_by_name": "",
+      "updated_at": "2021-01-18 10:37:42",
+      "awb_number": "",
+      "product_status": "S",
+      "cost_of_goods_sales": 0,
+      "order_cost": null,
+      "bank_name": "Srono",
+      "warehouse_name": null,
+      "cod_status": false
+    },
+    {
+      "order_id": 558,
+      "po_number": 497,
+      "username": "user",
+      "invoice": "INV.2021.01.12.497",
+      "shop_id": 1,
+      "order_date": "2021-01-12 11:21:27",
+      "sender_name": "Tusfendi",
+      "sender_category": "PELANGGAN",
+      "sender_category_code": "N",
+      "sender_address": "Desa",
+      "receiver_name": "Tusfendi",
+      "receiver_address": "Desa, Kec. Srono, Kabupaten Banyuwangi, 68471, Jawa Timur",
+      "receiver_phone": "0812345678",
+      "total_amount": 0,
+      "remaining_amount": 0,
+      "shipping_id": 98,
+      "shipping_rate": "",
+      "shipping_logistic": "Ambil di Toko",
+      "shipping_cost": 0,
+      "weight": 2,
+      "note": "",
+      "origin_name": "A Supplier 1",
+      "origin_address": "Jl. Abc",
+      "order_source": "",
+      "other_cost_amount": 0,
+      "order_progress_status": "UNPAID",
+      "order_status": "CANCELED",
+      "order_category": "APP",
+      "payment_status": "UNPAID",
+      "payment_date": "2021-01-12",
+      "products": [
+        {
+          "product_meta_id": 8055339,
+          "sku": null,
+          "name": "Kaos Yes",
+          "price": 20000,
+          "quantity": 10,
+          "thumbnail_url": "https://s3-ap-southeast-1.amazonaws.com/technoidea/products/default.jpg",
+          "color": null,
+          "size": null
+        }
+      ],
+      "shopee": null,
+      "created_by_name": "tusfendi",
+      "created_at": "2021-01-14 11:21:27",
+      "updated_by_name": "tusfendi",
+      "updated_at": "2021-01-14 11:21:27",
+      "awb_number": "",
+      "product_status": "S",
+      "cost_of_goods_sales": 0,
+      "order_cost": null,
+      "bank_name": null,
+      "warehouse_name": null,
+      "cod_status": false
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 31,
+      "count": 2,
+      "per_page": 2,
+      "current_page": 1,
+      "total_pages": 16,
+      "links": {
+        "next": "https://api.ngorder.id/api/open/order-cancel?per_page=2&pagination_offset=2"
+      }
+    }
+  }
+}
+```
+Get list of canceled orders.
+
+### Endpoint
+`GET https://api.ngorder.id/api/open/order-cancel`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Query
+Parameter | Type | Description
+--------- | ---- | -----------
+type `(optional)` | string | Status of order data. Available values: `CANCEL`, `REJECTED` or `EXPIRED`. Default value: `CANCEL`
+start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
+end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
+per_page `(optional)` | integer | Data per page. Default value: `10`. Max `50`
+pagination_offset `(optional)` | integer | Page number. Default value: `1`
+
+
+
+
+
+
+
+
+## Download Canceled Orders
+> Example request:
+
+```json
+```
+
+> Example response:
+
+```json
+
+```
+Download canceled, rejected or expired orders as Excel file.
+
+### Endpoint
+`GET https://api.ngorder.id/api/open/order-cancel/download`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Query
+Parameter | Type | Description
+--------- | ---- | -----------
+type `(optional)` | string | Status of order data. Available values: `CANCEL`, `REJECTED` or `EXPIRED`. Default value: `CANCEL`
+start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
+end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
+
+
+
+
+
+
+
+
+
+## Return Canceled Order
 > Example request:
 
 ```json
@@ -4881,25 +5164,60 @@ source | string | Source platform. Available values: `MOBILE` or `WEB`
 
 ```json
 ```
-m
+Return canceled order as active order.
 
 ### Endpoint
-`GET https://api.ngorder.id/api/open/`
+`POST https://api.ngorder.id/api/open/order-cancel/return`
 
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
-### Query
+### Body
 Parameter | Type | Description
 --------- | ---- | -----------
+id | integer | Order ID taken from [Get Orders](#get-orders)
 
 
-## Order Source -opt
-## Order Cost -opt
-## Order CRUD
-## Setting
+
+
+
+
+
+
+## Delete Canceled Order
+> Example request:
+
+```json
+```
+
+> Example response:
+
+```json
+```
+Delete canceled order permanently.
+
+### Endpoint
+`DELETE https://api.ngorder.id/api/open/order-cancel/{order_id}`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+id | integer | Canceled order ID taken from [Get Canceled Orders](#get-canceled-orders)
+
+
+
+
+
+
+
+
 
 # Storefront & Privor
 ## Get Orders
@@ -5031,7 +5349,7 @@ Get unconfirmed Privor and Storefront orders.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -5123,12 +5441,12 @@ Get detailed privor order.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-payment_id | integer | Payment ID taken from [Get Privor Orders](/#get-orders-2)
+payment_id | integer | Payment ID taken from [Get Privor Orders](#get-orders-2)
 
 
 
@@ -5166,12 +5484,12 @@ Confirm privor orders.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Payment ID taken from [Get Privor Orders](/#get-orders-2)
+id | integer | Payment ID taken from [Get Privor Orders](#get-orders-2)
 orders | array | Privor orders <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Privor order ID</td></tr><tr><td>action</td><td>`string` Confirmation action. Available values: `ACCEPT` or `REJECT`</td></tr></table>
 
 
@@ -5292,7 +5610,7 @@ Get list of account active couriers.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -5333,7 +5651,7 @@ Get list of your shop custom couriers.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -5366,7 +5684,7 @@ Update courier activation status.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -5421,7 +5739,7 @@ is_active `(optional)` | boolean | Active status. Default value: `false`
   }
 }
 ```
-Update active status on multiple couriers. All IDs are taken from [Get Expeditions](/#get-expeditions)
+Update active status on multiple couriers. All IDs are taken from [Get Expeditions](#get-expeditions)
 
 ### Endpoint
 `PATCH https://api.ngorder.id/api/open/setting/courier/all`
@@ -5429,7 +5747,7 @@ Update active status on multiple couriers. All IDs are taken from [Get Expeditio
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -5466,12 +5784,12 @@ Update custom courier details.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Custom courier ID taken from [Custom Couriers](/#get-custom-couriers)
+id | integer | Custom courier ID taken from [Custom Couriers](#get-custom-couriers)
 name | string | Custom courier name
 fee | integer | Custom courier cost
 
@@ -5505,12 +5823,12 @@ Delete a custom courier.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Custom courier ID taken from [Custom Couriers](/#get-custom-couriers)
+id | integer | Custom courier ID taken from [Custom Couriers](#get-custom-couriers)
 
 
 
@@ -5544,12 +5862,12 @@ Take order back to status __ready to ship__.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-order_id | integer | Order ID taken from [Get Orders](/#get-orders)
+order_id | integer | Order ID taken from [Get Orders](#get-orders)
 
 
 
@@ -5595,12 +5913,12 @@ Package pickup request.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-pickup_request | array | Order data <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Order ID taken from [Get Orders](/#get-orders)</td></tr><tr><td>service `(optional)`</td><td>`string` Shipment service. Available values: `PICKUP` or `DROP_OFF`. Default value: `PICKUP`</td></tr></table>
+pickup_request | array | Order data <table><tr><th>Key</th><th>Value</th></tr><tr><td>id</td><td>`integer` Order ID taken from [Get Orders](#get-orders)</td></tr><tr><td>service `(optional)`</td><td>`string` Shipment service. Available values: `PICKUP` or `DROP_OFF`. Default value: `PICKUP`</td></tr></table>
 
 
 
@@ -5629,12 +5947,12 @@ Cancel a pickup request.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Order ID taken from [Get Orders](/#get-orders)
+id | integer | Order ID taken from [Get Orders](#get-orders)
 reason `(optional)` | string | Reason for cancelling the pickup request. Required if courier vendor is JNE
 
 
@@ -5679,7 +5997,7 @@ Get list of courier enabled for COD.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -5735,12 +6053,12 @@ Get shipment invoices.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](/#get-active-cod-couriers)
+courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](#get-active-cod-couriers)
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
 status `(optional)` | string | Invoice status. Available values: `COMPLETE` or `PENDING`
@@ -5770,12 +6088,12 @@ Get shipping report.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](/#get-active-cod-couriers)
+courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](#get-active-cod-couriers)
 interval `(optional)` | integer | Date range. Max 31 days. Default value: `7`
 
 
@@ -5801,12 +6119,12 @@ Download shipping report as CSV.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](/#get-active-cod-couriers)
+courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](#get-active-cod-couriers)
 interval `(optional)` | integer | Date range. Max 31 days. Default value: `7`
 
 
@@ -5831,12 +6149,12 @@ Download invoice as CSV file.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Invoice ID taken from [Get Shipment Invoices](/#get-shipment-invoices)
+id | integer | Invoice ID taken from [Get Shipment Invoices](#get-shipment-invoices)
 
 
 
@@ -5862,12 +6180,12 @@ Download shipping invoice as PDF file.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-invoice_id | string | Invoice ID taken from [Get Shipment Invoices](/#get-shipment-invoices)
+invoice_id | string | Invoice ID taken from [Get Shipment Invoices](#get-shipment-invoices)
 
 
 
@@ -5918,12 +6236,12 @@ Get shipping payment list.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](/#get-active-cod-couriers)
+courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](#get-active-cod-couriers)
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
 status `(optional)` | string | Invoice status. Available values: `COMPLETE` or `PENDING`
@@ -6006,19 +6324,19 @@ Get list of orders in shipment.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 keyword `(optional)` | string | Keyword to look for
-courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](/#get-active-cod-couriers)
+courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](#get-active-cod-couriers)
 status `(optional)` | string | Order progress. Available values: `READY_TO_SHIP`, `PICKUP_REQUEST`, `UNPICK`, `ON_PROCESS`, `DELIVERED`, `RETURNED`, `LOST`, `INVALID`, `SHIPMENT_PROBLEM` or `DROPOFF`. Default value: `READY_TO_SHIP`
 type `(optional)` | string | Filter by type. Available values: `ORDER_ID`, `CUSTOMER_NAME` or `AWB_NUMBER`
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`. Default value: today
 cod_status `(optional)` | string | Shipment COD status. Available values: `NON_COD` or `COD`
-supplier_id `optional` | integer | Supplier ID taken from [Get Suppliers](/#get-suppliers)
+supplier_id `optional` | integer | Supplier ID taken from [Get Suppliers](#get-suppliers)
 per_page `(optional)` | integer | Data per page. Default value: `50`
 pagination_offset `(optional)` | integer | Page number. Default value: `1`
 
@@ -6047,19 +6365,19 @@ Download list of orders in shipment as Excel file.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 keyword `(optional)` | string | Keyword to look for
-courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](/#get-active-cod-couriers)
+courier `(optional)` | string | Expedition name taken from [Get Active COD Couriers](#get-active-cod-couriers)
 status `(optional)` | string | Order progress. Available values: `READY_TO_SHIP`, `PICKUP_REQUEST`, `UNPICK`, `ON_PROCESS`, `DELIVERED`, `RETURNED`, `LOST`, `INVALID`, `SHIPMENT_PROBLEM` or `DROPOFF`. Default value: `READY_TO_SHIP`
 type `(optional)` | string | Filter by type. Available values: `ORDER_ID`, `CUSTOMER_NAME` or `AWB_NUMBER`
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`. Default value: today
 cod_status `(optional)` | string | Shipment COD status. Available values: `NON_COD` or `COD`
-supplier_id `optional` | integer | Supplier ID taken from [Get Suppliers](/#get-suppliers)
+supplier_id `optional` | integer | Supplier ID taken from [Get Suppliers](#get-suppliers)
 
 
 
@@ -6093,12 +6411,12 @@ Remove order from shipment list.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-order_id | integer | Order ID taken from [Get Orders](/#get-orders)
+order_id | integer | Order ID taken from [Get Orders](#get-orders)
 
 
 
@@ -6134,13 +6452,13 @@ Create an admin fee.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
 nominal | integer | Admin fee nominal. Max `4500`
-catgory_code | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+catgory_code | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 
 
 
@@ -6202,7 +6520,7 @@ Get list of admin fees.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -6236,14 +6554,14 @@ Update an admin fee.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Admin fee ID taken from [Get Admin Fees](/#get-admin-fees)
+id | integer | Admin fee ID taken from [Get Admin Fees](#get-admin-fees)
 nominal | integer | Admin fee nominal. Max `4500`
-catgory_code | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [Customer Categories](/#get-categories-2)
+catgory_code | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [Customer Categories](#get-categories-2)
 
 
 
@@ -6305,7 +6623,7 @@ Get detailed Xendit data.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -6338,12 +6656,12 @@ Update Xendit key.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-xendit_key | string | Xendit key taken from [Get Xendit Data](/#get-xendit-data)
+xendit_key | string | Xendit key taken from [Get Xendit Data](#get-xendit-data)
 
 
 
@@ -6411,7 +6729,7 @@ Get list of payments.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -6456,7 +6774,7 @@ Get OrderPay balance on your account.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -6490,7 +6808,7 @@ Get Xendit balance on your account.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -6518,12 +6836,12 @@ Withdrawal.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-xendit_bank_id | integer | Bank ID taken from [Xendit Master Data](/#get-xendit-master-data)
+xendit_bank_id | integer | Bank ID taken from [Xendit Master Data](#get-xendit-master-data)
 nominal | integer | Withdrawal amount. Min Rp50.000. The admin fee of Rp45.000 will be automatically added to the final nominal.
 holder_name | string | Holder name
 account_number | integer | Account number
@@ -6560,7 +6878,7 @@ Create an expense.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
@@ -6593,7 +6911,7 @@ Get all expenses.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -6628,7 +6946,7 @@ Download expense data as Excel.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -6666,12 +6984,12 @@ Update an expense.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Expense ID taken from [Get Expenses](/#get-expenses)
+id | integer | Expense ID taken from [Get Expenses](#get-expenses)
 title | string | Expense title. Max `100`
 nominal | integer | Expense nominal
 note | string | Expense note
@@ -6707,12 +7025,12 @@ Delete an expense
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Expense ID taken from [Get Expenses](/#get-expenses)
+id | integer | Expense ID taken from [Get Expenses](#get-expenses)
 
 
 
@@ -6778,7 +7096,7 @@ Get report.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -6837,7 +7155,7 @@ Get detailed report.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -6895,7 +7213,7 @@ Get bank account report.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -6963,7 +7281,7 @@ Get data for sales chart.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7043,7 +7361,7 @@ Get data for profit chart.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7104,7 +7422,7 @@ Get data for profit chart.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7162,7 +7480,7 @@ Get best customers.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7172,7 +7490,7 @@ month `(optional)` | integer | Month number. Format `m` (without leading zero). 
 year `(optional)` | integer | Year number. Format `yy` (last two digits). Required if `type: BY_MONTH`
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
-category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 order_by `(optional)` | string | Order the data. Available values: `TRANSACTION`, `SOLD_ITEMS`, `GROSS_SALES`, `NET_SALES` or `GROSS_PROFIT`. Just for owner's account. Default value: `TRANSACTION`
 per_page `(optional)` | integer | Data per page. Default value: `100`
 pagination_offset `(optional)` | integer | Page number. Default value: `1`
@@ -7198,7 +7516,7 @@ Get best selling products.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7248,7 +7566,7 @@ Get best location.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7296,7 +7614,7 @@ Get data for customer chart.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7306,7 +7624,7 @@ month `(optional)` | integer | Month number. Format `m` (without leading zero). 
 year `(optional)` | integer | Year number. Format `yy` (last two digits). Required if `type: BY_MONTH`
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
-category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 order_by `(optional)` | string | Order the data. Available values: `TRANSACTION`, `SOLD_ITEMS`, `GROSS_SALES`, `NET_SALES` or `GROSS_PROFIT`. Just for owner's account. Default value: `TRANSACTION`
 
 
@@ -7370,7 +7688,7 @@ Get data for analyzer chart.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7397,7 +7715,7 @@ Download best sales product
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Header
 Parameter | Type | Description
@@ -7422,7 +7740,7 @@ Download best customer data as Excel.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7432,7 +7750,7 @@ month `(optional)` | integer | Month number. Format `m` (without leading zero). 
 year `(optional)` | integer | Year number. Format `yy` (last two digits). Required if `type: BY_MONTH`
 start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
 end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
-category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](/#get-categories-2)
+category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 order_by `(optional)` | string | Order the data. Available values: `TRANSACTION`, `SOLD_ITEMS`, `GROSS_SALES`, `NET_SALES` or `GROSS_PROFIT`. Just for owner's account. Default value: `TRANSACTION`
 
 
@@ -7506,7 +7824,7 @@ Get all notifications for selected type.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7545,7 +7863,7 @@ Get unread notifications count.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -7577,12 +7895,12 @@ Push device token.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-token | integer | Device Firebase cloud messaging token
+Authorization | integer | Device Firebase cloud messaging token
 
 
 
@@ -7611,12 +7929,12 @@ Mark notification as read.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id `(optional)` | string | Notification ID taken from [Get Notifications](/#get-notifications)
+id `(optional)` | string | Notification ID taken from [Get Notifications](#get-notifications)
 type `(optional)` | string | Notification type. Available values: `ACTIVITY` or `NEWS`. Default value: `ACTIVITY`
 
 
@@ -7713,7 +8031,7 @@ Get user active addons.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -7787,7 +8105,7 @@ Get user billing histories.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
@@ -7814,7 +8132,7 @@ Download invoice as PDF
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
@@ -7860,7 +8178,7 @@ Get message templates.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 
 
@@ -7897,17 +8215,17 @@ token | string | Bearer token
 Send message to multiple customers.
 
 ### Endpoint
-`POST https://api.ngorder.id/api/open/woowa/customer/messages`
+`POST https://api.ngorder.id/api/open/woowa/customer`
 
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-customers | []integer | Customers ID taken from [Get Customers](/#get-customers)
+customers | []integer | Customers ID taken from [Get Customers](#get-customers)
 template | string | Message template text
 
 
@@ -7943,12 +8261,12 @@ Send message for an order.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Order ID taken from [Get Orders](/#get-orders)
+id | integer | Order ID taken from [Get Orders](#get-orders)
 message | string | Message template text
 
 
@@ -7981,12 +8299,12 @@ Get an order message.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Order ID taken from [Get Orders](/#get-orders)
+id | integer | Order ID taken from [Get Orders](#get-orders)
 type `(optional)` | string | Message type. Available values: `REMINDER`, `ORDER_PROCESSED`, `ORDER_COMPLETED`, `ORDER_CANCELED` or `PROMO`. Default value: `REMINDER`
 
 
@@ -8010,12 +8328,12 @@ Get multiple order messages.
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Path
 Parameter | Type | Description
 --------- | ---- | -----------
-order_id | integer | Order ID taken from [Get Orders](/#get-orders)
+order_id | integer | Order ID taken from [Get Orders](#get-orders)
 
 ## template
 > Example request:
@@ -8035,7 +8353,7 @@ m
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
-token | string | Bearer token
+Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
