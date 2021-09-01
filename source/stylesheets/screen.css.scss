@@ -36,6 +36,9 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+a {
+  color: $nav-active-text;
+}
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -72,9 +75,17 @@ html, body {
   }
 
   // This is the logo at the top of the ToC
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
   .logo {
     display: block;
-    max-width: 100%;
+    width: 80%;
     margin-bottom: $logo-margin;
   }
 
@@ -84,18 +95,18 @@ html, body {
     input {
       background: $nav-bg;
       border-width: 0 0 1px 0;
-      border-color: $search-box-border-color;
+      border-color: $nav-text;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
-      width: $nav-width - ($nav-padding*2);
+      width: 80%;
       outline: none;
       color: $nav-text;
       border-radius: 0; /* ios has a default border radius */
     }
 
     input::placeholder {
-      color: rgba(255,255,255,0.7);
+      color: rgba($nav-text, 0.5);
     }
 
     &:before {
@@ -600,6 +611,21 @@ html, body {
 
   .toc-wrapper .lang-selector {
     display: block;
+    background-color: $nav-bg;
+  
+    a {
+      color: $lang-select-text-sm;
+
+      &:active, &:focus {
+        background-color: $lang-select-pressed-bg-sm;
+        color: $lang-select-pressed-text-sm;
+      }
+  
+      &.active {
+        background-color: $lang-select-active-bg-sm;
+        color: $lang-select-active-text-sm;
+      }
+    }
   }
 
   .page-wrapper .lang-selector {

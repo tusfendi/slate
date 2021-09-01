@@ -5,8 +5,6 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - JSON
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
   - errors
@@ -2019,12 +2017,13 @@ Authorization | string | User's bearer token
 ### Body
 Parameter | Type | Description
 --------- | ---- | -----------
+customer_id | integer | Customer's ID taken from [Get Customers](#get-customers)
 name `(optional)` | string | Customer's name
 phone `(optional)` | numeric | Customer's phone number
 district_id `(optional)` | numeric | District ID taken from [Region](#region)
 address `(optional)` | string | Customer's detailed address
 postal_code `(optional)` | numeric | Postal code
-category `(optionl)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
+category `(optional)` | string | Type of customer. Available values: `N` (Customer), `Y` (Reseller), `D` (Dropshipper) or custom category code taken from [customer categories](#get-categories-2)
 line `(optional)` | string | Customer's Line ID
 email `(optional)` | string | Customer's email
 other `(optional)` | string | Customer's other contacts
@@ -8335,7 +8334,7 @@ Parameter | Type | Description
 --------- | ---- | -----------
 order_id | integer | Order ID taken from [Get Orders](#get-orders)
 
-## template
+<!-- ## template
 > Example request:
 
 ```json
@@ -8357,7 +8356,7 @@ Authorization | string | User's bearer token
 
 ### Query
 Parameter | Type | Description
---------- | ---- | -----------
+--------- | ---- | ----------- -->
 <!-- ## Get All Kittens
 
 ```ruby
