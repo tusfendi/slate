@@ -39,6 +39,16 @@ html, body {
 a {
   color: $nav-active-text;
 }
+
+.p {
+  color: $main-text;
+}
+
+.nl {
+  color: $nav-active-text;
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -294,7 +304,7 @@ a {
 
 .lang-selector {
   display: flex;
-  background-color: $lang-select-bg;
+  background-color: $main-bg;
   width: 100%;
   font-weight: bold;
   overflow-x: auto;
@@ -307,13 +317,13 @@ a {
     outline: 0;
 
     &:active, &:focus {
-      background-color: $lang-select-pressed-bg;
-      color: $lang-select-pressed-text;
+      background-color: $lang-select-pressed-bg-sm;
+      color: $lang-select-pressed-text-sm;
     }
 
     &.active {
-      background-color: $lang-select-active-bg;
-      color: $lang-select-active-text;
+      background-color: $lang-select-active-bg-sm;
+      color: $lang-select-active-text-sm;
     }
   }
 
@@ -652,9 +662,9 @@ a {
 
 .copy-clipboard {
   float: right;
-  fill: #9DAAB6;
+  fill: $main-text;
   cursor: pointer;
-  opacity: 0.4;
+  opacity: 0.5;
   height: 18px;
   width: 18px;
 }

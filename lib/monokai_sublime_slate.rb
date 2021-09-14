@@ -27,6 +27,11 @@ module Rouge
         palette :whitish        => '#f8f8f2'
         palette :orange         => '#f6aa11'
         palette :white          => '#ffffff'
+        palette :ngorder_dark   => '#212529'
+        palette :ngorder_blue   => '#1155cc'
+        palette :ngorder_violet => '#a16dff'
+
+
 
         style Generic::Heading,                 :fg => :grey
         style Literal::String::Regex,           :fg => :orange
@@ -50,7 +55,7 @@ module Rouge
               Keyword::Declaration,
               Keyword::Reserved,
               Name::Constant,
-              Keyword::Type,                    :fg => :soft_cyan
+              Keyword::Type,                    :fg => :emperor
         style Literal::Number::Float,
               Literal::Number::Hex,
               Literal::Number::Integer::Long,
@@ -59,7 +64,7 @@ module Rouge
               Literal::Number,
               Literal::String::Char,
               Literal::String::Escape,
-              Literal::String::Symbol,          :fg => :light_violet
+              Literal::String::Symbol,          :fg => :bright_pink
         style Literal::String::Doc,
               Literal::String::Double,
               Literal::String::Backtick,
@@ -67,7 +72,7 @@ module Rouge
               Literal::String::Interpol,
               Literal::String::Other,
               Literal::String::Single,
-              Literal::String,                  :fg => :soft_yellow
+              Literal::String,                  :fg => :ngorder_violet
         style Name::Attribute,
               Name::Class,
               Name::Decorator,
@@ -83,13 +88,13 @@ module Rouge
               Text::Whitespace,
               Text,
               Name,                             :fg => :white
-        style Name::Label,                      :fg => :bright_pink
+        style Name::Label,                      :fg => :ngorder_blue
         style Operator::Word,
               Name::Tag,
               Keyword,
               Keyword::Namespace,
               Keyword::Pseudo,
-              Operator,                         :fg => :bright_pink
+              Operator,                         :fg => :emperor
       end
     end
   end
