@@ -622,7 +622,7 @@ pagination_offset `(optional)` | integer | Page number. Default `1`
 
 
 
-
+<!-- 
 ## Get Single Order Detail
 > Example request:
 
@@ -791,7 +791,7 @@ Authorization | string | User's bearer token
 ### Query
 Parameter | Type | Description
 --------- | ---- | -----------
-id | integer | Order ID
+id | integer | Order ID -->
 
 
 

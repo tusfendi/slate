@@ -141,7 +141,47 @@ end_date `(optional)` | string | Date to which data are requested. Format `yyyy-
 
 
 
+## Best Sales Channels
+> Example request:
 
+```json
+```
+
+> Example response:
+
+```json
+{
+  "data": [
+      {
+          "title": "App Dashboard",
+          "net_sales": 945000,
+          "total": 7
+      },
+      {
+          "title": "Private Order",
+          "net_sales": 105000,
+          "total": 1
+      }
+  ]
+}
+```
+Get best sales channels.
+
+### Endpoint
+`GET https://api.ngorder.id/api/open/analyzer/sales-channel`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Query
+Parameter | Type | Description
+--------- | ---- | -----------
+start_date `(optional)` | string | Date from which data are requested. Format `yyyy-mm-dd`
+end_date `(optional)` | string | Date to which data are requested. Format `yyyy-mm-dd`
+per_page `(optional)` | integer | Data per page. Default value is without page limit
+with_net_sales `(optional) | integer |  use this paramemter with value = `1` if you want to count net sales amount
 
 
 ## Customer Chart
