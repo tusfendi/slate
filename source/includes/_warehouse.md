@@ -1,4 +1,5 @@
 # Warehouse
+You can take advantage of this API if you have product stock in several different warehouses. warehouse is optional, you can skip this API if you have 1 warehouse, because the system will initialize it as "Main Warehouse (**Gudang Utama**)"
 ## Create Warehouse
 > Example request:
 
@@ -74,6 +75,7 @@ Authorization | string | User's bearer token
 Parameter | Type | Description
 --------- | ---- | -----------
 with_main_warehouse `(optional)` | boolean | Includes main warehouse. Default `false`
+admin_permission `(optional)` | boolean | Only shows the warehouse according to each user's access. Default `false`, show permited access warehouse per user only
 
 ## Get Warehouse Detail
 > Example request:

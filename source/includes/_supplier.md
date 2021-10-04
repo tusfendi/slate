@@ -1,4 +1,5 @@
 # Supplier
+Supplier is used as the origin of the shipping address
 ## Create Supplier
 > Example request:
 
@@ -77,8 +78,7 @@ description | string | Data description
   ]
 }
 ```
-Get all suppliers
-
+Get all suppliers.
 ### Endpoint
 `GET https://api.ngorder.id/api/open/supplier`
 

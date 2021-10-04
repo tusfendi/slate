@@ -9,14 +9,15 @@ toc_footers:
 includes:
   - user
   - shop
+  - supplier
+  - warehouse
   - product/product_category
   - product/product
+  - stock_opname
   - customer/customer_category
   - region
   - customer/customer
   - bank
-  - supplier
-  - warehouse
   - expedition
   - marketplace
   - order/order_source
