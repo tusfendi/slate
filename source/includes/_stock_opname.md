@@ -8,7 +8,7 @@ Stock opname is a feature used to adjust stock in the system and real stock in t
 {
     "warehouse_id": 0,
     "description": "Stok opname bulanan",
-    "stock_adjusment": [
+    "stock_adjustment": [
         {
             "variation_id": 10113507,
             "warehouse_stock": 35
@@ -54,9 +54,9 @@ Parameter | Type | Description
 --------- | ---- | -----------
 warehouse_id | integer | Warehouse ID taken from [warehouse](#warehouse)
 description | string | Stock Opname Description
-stock_adjusment | array | 
-stock_adjusment[][variation_id] | integer | variation id from frome [search variation for stock opname](#search-variation-for-stock-opname)
-stock_adjusment[][warehouse_stock] | integer | actual stock in warehouse
+stock_adjustment | array | 
+stock_adjustment[][variation_id] | integer | variation id from frome [search variation for stock opname](#search-variation-for-stock-opname)
+stock_adjustment[][warehouse_stock] | integer | actual stock in warehouse
 
 ## Get Stock Opname List
 
@@ -175,7 +175,7 @@ id | integer | Stock Opname ID
             "full_name": "Kaos Polos XL",
             "thumbnail_url": "https://s3-ap-southeast-1.amazonaws.com/technoidea/products/default.jpg",
             "sku": "PBV-LL2",
-            "stock_adjusment": {
+            "stock_adjustment": {
                 "warehouse_stock": 35,
                 "system_stock": 10,
                 "changed_stock": 25
@@ -187,7 +187,7 @@ id | integer | Stock Opname ID
             "full_name": "Kaos Polos L",
             "thumbnail_url": "https://s3-ap-southeast-1.amazonaws.com/technoidea/products/default.jpg",
             "sku": "PBV-LL0",
-            "stock_adjusment": {
+            "stock_adjustment": {
                 "warehouse_stock": 35,
                 "system_stock": 35,
                 "changed_stock": 0
@@ -199,7 +199,7 @@ id | integer | Stock Opname ID
             "full_name": "Kaos Polos M",
             "thumbnail_url": "https://s3-ap-southeast-1.amazonaws.com/technoidea/products/default.jpg",
             "sku": "PBV-LL6",
-            "stock_adjusment": {
+            "stock_adjustment": {
                 "warehouse_stock": 35,
                 "system_stock": 35,
                 "changed_stock": 0

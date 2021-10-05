@@ -575,7 +575,8 @@ customer_id `(optional)` | integer | Customer ID. For checking product promo ava
       "user": "juragan@ngorder.id",
       "detail": {
         "description": "Initial variation stock on 2021-08-09",
-        "id_order": null
+        "id_order": null,
+        "stock_opname_id": 99,
       },
       "warehouse": {
         "id": null,
