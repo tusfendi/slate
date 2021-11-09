@@ -42,8 +42,7 @@ Stock opname is a feature used to adjust stock in the system and real stock in t
 The process of creating stock opname will automatically run in the background if there are a lot of customized product stocks. The progress status of the stock taking can be seen in the `progress_status` response. the `progress_status` can contain `ON PROGRESS` / `SUCCESS`.
 
 ### Endpoint
-`POST https://api.ngorder.id/api/open/stock_opname`
-
+`POST https://api.ngorder.id/api/open/stock-opname`
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
@@ -57,6 +56,50 @@ description | string | Stock Opname Description
 stock_adjustment | array | 
 stock_adjustment[][variation_id] | integer | variation id from frome [search variation for stock opname](#search-variation-for-stock-opname)
 stock_adjustment[][warehouse_stock] | integer | actual stock in warehouse
+
+## Import Stock Opname
+
+Import stock opname is another way to do stock opname by uploading excel file. You are only allowed to change the warehouse stock from the excel file you downloaded. Note: please upload the excel file according to the specified format from [generate stock opname template](#generate-template-stock-opname). Import process will run in the background and maximum file you can upload is 2 Megabytes.
+
+> Example success response:
+
+```json
+{
+    "response": "Success",
+    "message": "Import is in progress"
+}
+```
+### Endpoint
+`POST https://api.ngorder.id/api/open/stock-opname/import`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Body
+Parameter | Type | Description
+--------- | ---- | -----------
+file | file | file from [generate stock opname template](#generate-template-stock-opname) (xlsx format)
+
+## Generate Template Stock Opname
+
+This API generates files in .xlsx format. This file contains warehouse information and product data variants that already exist in the selected warehouse. Note: You can only adjust warehouse stock. You are not allowed to change the existing product sku data and warehouse code in the file.
+
+If you have customized warehouse stock, you can upload this file in [Import Stock Opname](#import-stock-opname)
+
+### Endpoint
+`GET https://api.ngorder.id/api/open/stock-opname/import`
+
+### Header
+Parameter | Type | Description
+--------- | ---- | -----------
+Authorization | string | User's bearer token
+
+### Query
+Parameter | Type | Description
+--------- | ---- | -----------
+warehouse_id | integer | Warehouse ID taken from [warehouse](#get-warehouses), required
 
 ## Get Stock Opname List
 
@@ -105,14 +148,14 @@ stock_adjustment[][warehouse_stock] | integer | actual stock in warehouse
 ```
 
 ### Endpoint
-`GET https://api.ngorder.id/api/open/stock_opname`
+`GET https://api.ngorder.id/api/open/stock-opname`
 
 ### Header
 Parameter | Type | Description
 --------- | ---- | -----------
 Authorization | string | User's bearer token
 
-### Body
+### Query
 Parameter | Type | Description
 --------- | ---- | -----------
 per_page `(optional)` | integer | Data per page. Default value: `20`
@@ -150,7 +193,7 @@ user_id `(optional)` | integer | User ID who made the stock opname
 Get stock opname detail data.
 
 ### Endpoint
-`GET https://api.ngorder.id/api/open/stock_opname/{id}/detail`
+`GET https://api.ngorder.id/api/open/stock-opname/{id}/detail`
 
 ### Header
 Parameter | Type | Description
@@ -222,7 +265,7 @@ id | integer | Stock Opname ID
 Get stock opname transaction.
 
 ### Endpoint
-`GET https://api.ngorder.id/api/open/stock_opname/transaction`
+`GET https://api.ngorder.id/api/open/stock-opname/transaction`
 
 ### Header
 Parameter | Type | Description
@@ -275,7 +318,7 @@ pagination_offset `(optional)` | integer | Page number. Default value: `1`
 Search variation for create stock opname
 
 ### Endpoint
-`GET https://api.ngorder.id/api/open/stock_opname/variation`
+`GET https://api.ngorder.id/api/open/stock-opname/variation`
 
 ### Header
 Parameter | Type | Description
@@ -287,4 +330,4 @@ Parameter | Type | Description
 --------- | ---- | -----------
 product_id `(optional)` | integer | Product ID. must without warehouse_id and keyword
 keyword `(optional)` | integer | required with keyword, must without product_id. value from product name / SKU
-warehouse_id `(optional)` | integer | required with warehouse_id, must without product_id.
+warehouse_id | integer | required, from [warehouse](#warehouse)
