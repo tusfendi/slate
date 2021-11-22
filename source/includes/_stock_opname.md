@@ -300,6 +300,8 @@ pagination_offset `(optional)` | integer | Page number. Default value: `1`
         {
             "variation_id": 10204994,
             "name": "Kaos Leo Polos L Hijau",
+            "product_name": "Kaos Leo Polos",
+            "variation_name": "L Hijau",
             "sku": "KLP-HIJ-L-L6Q",
             "thumbnail_url": "https://cepat.b-cdn.net/7/products/kaos-leo-polos-warna-warni-1633061215514.jpeg",
             "system_stock": 10
@@ -307,6 +309,8 @@ pagination_offset `(optional)` | integer | Page number. Default value: `1`
         {
             "variation_id": 10204993,
             "name": "Kaos Leo Polos L Merah",
+            "product_name": "Kaos Leo Polos",
+            "variation_name": "L Merah",
             "sku": "KLP-MER-L-L6E",
             "thumbnail_url": "https://cepat.b-cdn.net/7/products/kaos-leo-polos-warna-warni-1633061178898.jpg",
             "system_stock": 0

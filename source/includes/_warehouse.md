@@ -76,6 +76,7 @@ Parameter | Type | Description
 --------- | ---- | -----------
 with_main_warehouse `(optional)` | boolean | Includes main warehouse. Default `false`
 admin_permission `(optional)` | boolean | Only shows the warehouse according to each user's access. Default `false`, show permited access warehouse per user only
+is_active `(optional)` | string | Warehouse active, in ALL,ACTIVE,NON_ACTIVE, default `ALL` if admin_permission empty and default `ACTIVE` if admin_permission `true` / `1`
 
 ## Get Warehouse Detail
 > Example request:
